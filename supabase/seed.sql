@@ -1,0 +1,2 @@
+-- Optional example subjects are added automatically when you upload a note under that subject.
+-- Do not insert real passwords here. The first admin record is created by the server from .env.

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071326">
+  <title>Admin Console | Zynocta Cyber Academy</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="admin-body">
+  <div class="ambient ambient-one"></div>
+  <main class="admin-shell wrap">
+    <a class="brand admin-brand" href="/"><span
+        class="brand-mark"><span></span><span></span><span></span></span><span>Zynocta <b>Cyber Academy</b></span></a>
+    <section id="login-panel" class="login-panel">
+      <div class="login-badge">⌑</div>
+      <div class="eyebrow">RESTRICTED AREA</div>
+      <h1>Administrator<br><span>sign in.</span></h1>
+      <p class="muted">Manage the academy's published learning materials.</p>
+      <form id="login-form" class="stack-form"><label>Email address<input name="email" type="email"
+            autocomplete="username" placeholder="admin@example.com" required></label><label>Password<input
+            name="password" type="password" autocomplete="current-password" placeholder="Enter your admin password"
+            required></label><button class="button button-primary button-full" type="submit">Secure sign in
+          <span>→</span></button>
+        <p class="form-message" id="login-message" role="status"></p>
+      </form><a href="/" class="back-link">← Return to academy homepage</a>
+    </section>
+    <section id="dashboard-panel" class="dashboard-panel hidden">
+      <div class="dashboard-top">
+        <div>
+          <div class="eyebrow">ADMINISTRATOR WORKSPACE</div>
+          <h1>Content <span>management.</span></h1>
+          <p class="muted">Upload and organize the PDF notes students can read.</p>
+        </div><button id="logout-button" class="button button-outline">Sign out ↗</button>
+      </div>
+      <div class="admin-stats">
+        <div class="admin-stat"><small>Published notes</small><strong id="admin-total">0</strong></div>
+        <div class="admin-stat"><small>Subjects</small><strong id="admin-subjects">0</strong></div>
+        <diFv class="admin-stat"><small>Storage mode</small><strong id="storage-mode">Local</strong></diFv>
+      </div>
+      <div class="admin-layout">
+        <section class="admin-card upload-card">
+          <div class="card-heading">
+            <div>
+              <div class="eyebrow">ADD A RESOURCE</div>
+              <h2>Upload PDF notes</h2>
+            </div><span class="upload-symbol">↑</span>
+          </div>
+          <p class="muted">Choose an existing PDF from your computer. It will be stored privately and served through the
+            protected reader.</p>
+          <form id="upload-form" class="stack-form"><label>Note title<input name="title" type="text" maxlength="160"
+                placeholder="e.g. Identification and Authentication" required></label><label>Subject / category<input
+                name="subject" type="text" maxlength="80" placeholder="e.g. Cybersecurity Fundamentals"
+                list="subject-options" required><datalist id="subject-options"></datalist></label><label>Description
+              <span class="optional">(optional)</span><textarea name="description" rows="3" maxlength="500"
+                placeholder="A short summary of this note…"></textarea></label><label class="file-drop"
+              for="pdf-file"><span class="file-icon">▤</span><strong id="file-label">Choose a PDF
+                file</strong><small>PDF only · Maximum 100 MB by default</small><input id="pdf-file" name="pdf"
+                type="file" accept="application/pdf,.pdf" required></label>
+            <div class="upload-progress hidden" id="upload-progress"><span></span></div><button
+              class="button button-primary button-full" type="submit">Upload learning material <span>↑</span></button>
+            <p class="form-message" id="upload-message" role="status"></p>
+          </form>
+        </section>
+        <section class="admin-card notes-card">
+          <div class="card-heading">
+            <div>
+              <div class="eyebrow">YOUR LIBRARY</div>
+              <h2>Manage notes</h2>
+            </div><button id="refresh-button" class="icon-button" title="Refresh list"
+              aria-label="Refresh list">↻</button>
+          </div><label class="search-box admin-search"><span>⌕</span><input id="admin-search" type="search"
+              placeholder="Search uploaded notes…" aria-label="Search uploaded notes"></label>
+          <div id="admin-materials" class="admin-material-list">
+            <div class="empty-state"><span class="loader"></span>
+              <p>Loading materials…</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="security-note"><span>◇</span>
+        <p><strong>Security reminder:</strong> Keep your administrator credentials private. Students can read published
+          notes, but only an authenticated administrator can upload, replace, or delete them.</p>
+      </div>
+    </section>
+  </main>
+  <script src="/js/admin.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#071326">
+    <title>Read Notes | Zynocta Cyber Academy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="reader-body">
+    <header class="reader-header"><a class="brand" href="/"><span
+                class="brand-mark"><span></span><span></span><span></span></span><span>Zynocta <b>Cyber
+                    Academy</b></span></a><a class="button button-outline button-small" href="/">← Back to library</a>
+    </header>
+    <main class="reader-main">
+        <div class="reader-titlebar">
+            <div>
+                <div class="eyebrow" id="reader-subject">LEARNING MATERIAL</div>
+                <h1 id="reader-title">Loading note…</h1>
+                <p id="reader-description" class="muted"></p>
+            </div><span class="read-only-chip">◉ READ ONLINE</span>
+        </div>
+        <div class="pdf-frame-wrap">
+            <div id="pdf-loading" class="pdf-loading"><span class="loader"></span>
+                <p>Loading secure PDF viewer…</p>
+            </div><canvas id="pdf-canvas" aria-label="PDF page"></canvas>
+            <div class="pdf-controls"><button id="prev-page" class="button button-outline button-small" disabled>←
+                    Previous</button><span id="page-info">Page — of —</span><button id="next-page"
+                    class="button button-outline button-small" disabled>Next →</button><button id="zoom-out"
+                    class="icon-button" aria-label="Zoom out">−</button><span id="zoom-label">100%</span><button
+                    id="zoom-in" class="icon-button" aria-label="Zoom in">+</button></div>
+        </div>
+        <p class="reader-disclaimer">This viewer is designed for reading online. Browser-based viewing cannot completely
+            prevent screenshots or other forms of copying.</p>
+    </main>
+    <script src="/vendor/pdf.min.js"></script>
+    <script src="/js/reader.js" defer></script>
+</body>
+
+</html>

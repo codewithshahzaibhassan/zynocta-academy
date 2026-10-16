@@ -1,0 +1,33 @@
+{
+  "name": "zynocta-cyber-academy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A secure Cybersecurity PDF learning library with a private admin dashboard.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "create-admin": "node scripts/create-admin.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check server/server.js && node --check server/routes/admin.js && node --check server/routes/public.js && node --check public/js/app.js && node --check public/js/admin.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "bcryptjs": "^3.0.2",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.2",
+    "pg": "^8.16.3",
+    "pdfjs-dist": "^3.11.174"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
