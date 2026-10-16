@@ -43,7 +43,7 @@ $("#login-form").addEventListener("submit", async (e) => {
   btn.disabled = true;
   message(msg, "Checking credentials…");
   try {
-    const form = new FormData(formElement);
+    const form = new FormData(formElement);ss
     await api("/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
